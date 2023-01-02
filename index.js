@@ -24,10 +24,11 @@ const getCards = async () => {
     try {
             const res = await apiCats.getCards();
             const data = await res.json();
+            console.log(data);
             updateCard(data)
         return data;
     } catch (error) {
-        alert('Ошибка:', error)
+        alert('Ошибка:', error) //начать отсюда
     }
 };
     //добавить карточку
