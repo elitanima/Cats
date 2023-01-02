@@ -28,7 +28,7 @@ const getCards = async () => {
             updateCard(data)
         return data;
     } catch (error) {
-        alert('Ошибка:', error) //начать отсюда
+        alert(`Ошибка: ${error}`) //начать отсюда
     }
 };
     //добавить карточку
@@ -38,7 +38,7 @@ const addCard = async (body) => {
             const data = await res.json();
         return data;
     } catch (error) {
-        alert('Ошибка:', error)
+        alert(`Ошибка: ${error}`)
     }
 };
 
