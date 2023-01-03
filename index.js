@@ -4,9 +4,11 @@ let user = 'Testing123'
 //Создаем экземпляр класса 
 let apiCats = new Api(user);
 
+// apiCats.urlName()
 //Получаем элементы с html разметки
 $modalFormEdd = document.querySelector('#modalFormEdd'); //модальное окно добавления
 $card_view = document.querySelector('#card_view'); // секция отображения карточек
+// console.log($card_view);
 
 //Формирование html карточек
 let htmlCard = (cat) => 
@@ -18,11 +20,14 @@ let htmlCard = (cat) =>
     <button class="basket" data-btn="delete">Удалить</button>
 </div>`
 
+// let testHtml = (cat) => `<h1>Привет ${cat.name} Мир!</h1>`
+
 //Async/await обработка ответов сервера
     //показать карточки
 const getCards = async () => {
     try {
             const res = await apiCats.getCards();
+            // console.log(res);
             const data = await res.json();
             console.log(data);
             updateCard(data)
@@ -38,7 +43,7 @@ const addCard = async (body) => {
             const data = await res.json();
         return data;
     } catch (error) {
-        alert(`Ошибка: ${error}`)
+        alert(`Ошибка: ${error}`) // alert("Ошибка:" error)
     }
 };
 
@@ -77,5 +82,9 @@ document.forms.addFormName.addEventListener('submit', (event) => {
 
 //Функция формирования карточек
 function updateCard(data) {
+    console.log(data);
     data.forEach(cat => $card_view.insertAdjacentHTML("beforeend", htmlCard(cat)));
+    // data.forEach(card => console.log(card))
+    // data.forEach(cat => $card_view.insertAdjacentHTML("beforeend", testHtml(cat)));
 }
+

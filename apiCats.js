@@ -2,13 +2,16 @@
 class Api {
     constructor (user){
         this.url = `https://cats.petiteweb.dev/api/single/${user}/`;
-        this.user = user;
+        // this.user = user;
     }
+    // urlName(){
+    //     console.log(this.url);
+    // }
 // получить все карточки
     getCards() {
         return fetch(`${this.url}show`);
         }
-// получить ID  всех карточек
+// получить ID  всех карточек //не использовал
     getIdCards() {
         return fetch(`${this.url}ids`);
     }
