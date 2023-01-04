@@ -21,14 +21,18 @@
       <button data-btn="show">Показать карточки</button>
     </header>
     <!-- секция с карточками -->
-    <section class="section_cards_cats" id="section">
+    <section
+      data-section="section_show"
+      class="section_cards_cats"
+      id="section"
+    >
       <div class="card_view" id="card_view"></div>
     </section>
     <!-- подвал сайта -->
     <footer class="footer"></footer>
     <!-- модальное окно добавления -->
     <div class="hidden" id="modalFormEdd">
-      <div class="background_modal">
+      <div data-btn="modalend" class="background_modal">
         <div class="modal">
           <form name="addFormName" id="addFormId">
             <input type="number" name="id" placeholder="Введите ID" min="1" />

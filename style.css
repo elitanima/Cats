@@ -135,9 +135,9 @@ span:active {
     background-color: brown;
 }
 
-.card:active {
+/* .card:active {
     transform: scale(0.9);
-}
+} */
 
 .card h3, p{
    margin: 0;
