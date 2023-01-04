@@ -1,54 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="/apiCats.js"></script>
-    <script defer src="/index.js"></script>
-    <script defer src="/constructor.js"></script>
-    <script defer src="/for.js"></script>
-    <script defer src="/querySel.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="apiCats.js"></script>
+    <script defer src="index.js"></script>
+    <script defer src="constructor.js"></script>
+    <script defer src="for.js"></script>
+    <script defer src="querySel.js"></script>
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- шапка сайта -->
     <header class="header">
-        <h1>Коллекция</h1>
-        <button data-btn="Test" id="test">Кнопка</button>
-        <button data-btn="addCardForm">Форма добавления</button>
-        <button data-btn="show">Показать карточки</button>
+      <h1>Коллекция</h1>
+      <button data-btn="Test" id="test">Кнопка</button>
+      <button data-btn="addCardForm">Форма добавления</button>
+      <button data-btn="show">Показать карточки</button>
     </header>
     <!-- секция с карточками -->
     <section class="section_cards_cats" id="section">
-        <div class="card_view" id="card_view"></div>
+      <div class="card_view" id="card_view"></div>
     </section>
     <!-- подвал сайта -->
-    <footer class="footer">
-    </footer>
+    <footer class="footer"></footer>
     <!-- модальное окно добавления -->
     <div class="hidden" id="modalFormEdd">
-        <div class="background_modal">
-            <div class="modal">
-                <form name="addFormName" id="addFormId">
-                    <input  type = "number" name="id" placeholder="Введите ID" min="1">
-                    <input  type = "text" name="name" placeholder="Введите имя">
-                    <input  type = "number" name="age" placeholder="Введите возраст" min="1">
-                    <input  type="text" name="description" placeholder="Описание">
-                    <input  type="url" name="image" placeholder="Ссылка на фото">
-                    <select name="favorite">
-                        <option value="true">Привитый</option>
-                        <option value="false">Не привитый</option>
-                    </select>
-                    <input type = "number" name="rate" placeholder="Рейтинг от 1 до 10" min="1" max="10">
-                    <button data-btn="addFormAdd">Добавить</button>
-                    <span data-btn="addFormClose">Отмена</span>
-                </form>
-            </div>
+      <div class="background_modal">
+        <div class="modal">
+          <form name="addFormName" id="addFormId">
+            <input type="number" name="id" placeholder="Введите ID" min="1" />
+            <input type="text" name="name" placeholder="Введите имя" />
+            <input
+              type="number"
+              name="age"
+              placeholder="Введите возраст"
+              min="1"
+            />
+            <input type="text" name="description" placeholder="Описание" />
+            <input type="url" name="image" placeholder="Ссылка на фото" />
+            <select name="favorite">
+              <option value="true">Привитый</option>
+              <option value="false">Не привитый</option>
+            </select>
+            <input
+              type="number"
+              name="rate"
+              placeholder="Рейтинг от 1 до 10"
+              min="1"
+              max="10"
+            />
+            <button data-btn="addFormAdd">Добавить</button>
+            <span data-btn="addFormClose">Отмена</span>
+          </form>
         </div>
+      </div>
     </div>
     <!-- модальное окно редактирования -->
-    
-</body>
+  </body>
 </html>
